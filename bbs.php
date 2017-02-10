@@ -64,5 +64,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       ひとこと: <input type="text" name="comment" size="60" /><br />
       <input type="submit" name="submit" value="送信" />
     </form>
+
+    <?php
+    $sql = "SELECT * FROM `post` ORDER BY `created_at` DESC";
+    $result = mysql_query($sql, $link);
+    ?>
   </body>
 </html>
