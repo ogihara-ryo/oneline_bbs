@@ -1,3 +1,11 @@
+<?php
+// TODO: 第一引数が 'localhost' だと Access denied になる
+$link = mysql_connect('127.0.0.1', 'root', '');
+if (!$link) {
+  die('データベースに接続できません: ' . mysql_error());
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
