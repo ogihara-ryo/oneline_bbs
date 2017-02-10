@@ -4,6 +4,8 @@ $link = mysql_connect('127.0.0.1', 'root', '');
 if (!$link) {
   die('データベースに接続できません: ' . mysql_error());
 }
+
+mysql_select_db('oneline_bbs', $link);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
