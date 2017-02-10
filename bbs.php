@@ -36,6 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       . mysql_real_escape_string($comment) . "', '"
       . date('Y-m-d H:i:s') . "')";
     mysql_query($sql, $link);
+    mysql_close($link);
+
+    header('Location: http://' .$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
   }
 }
 ?>
